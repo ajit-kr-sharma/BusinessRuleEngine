@@ -22,17 +22,17 @@ namespace BusinessRuleEngine.Services.OrderProcessingService
                 model.Status = true;
 
                 return new PaymentStatus {
-                    isOrderProcessed = true,
-                    message = "Membership Activated",
-                    isNotificationSent = true
+                    IsOrderProcessed = true,
+                    Message = "Membership Activated",
+                    IsNotificationSent = true
                 };
             }
 
             return new PaymentStatus
             {
-                isOrderProcessed = false,
-                message = "Membership Not Activated",
-                isNotificationSent = false
+                IsOrderProcessed = false,
+                Message = "Membership Not Activated",
+                IsNotificationSent = false
             };
         }
     }

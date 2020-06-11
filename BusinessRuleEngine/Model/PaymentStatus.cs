@@ -8,9 +8,9 @@ namespace BusinessRuleEngine.Model
 {
     public class PaymentStatus
     {
-        public string message { get; set; }
-        public bool isOrderProcessed { get; set; }
+        public string Message { get; set; }
+        public bool IsOrderProcessed { get; set; }
 
-        public bool isNotificationSent { get; set; }
+        public bool IsNotificationSent { get; set; }
     }
 }

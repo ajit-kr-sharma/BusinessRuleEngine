@@ -43,12 +43,16 @@
   <ItemGroup>
     <Compile Include="Interface\IOrderProcessing.cs" />
     <Compile Include="Model\BookModel.cs" />
+    <Compile Include="Model\VideoModel.cs" />
+    <Compile Include="Model\PhysicalProductOrBookModel.cs" />
     <Compile Include="Model\UpgradeMembershipModel.cs" />
     <Compile Include="Model\PhysicalProductModel.cs" />
     <Compile Include="Model\MembershipModel.cs" />
     <Compile Include="Model\PaymentStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\OrderProcessingService\BookService.cs" />
+    <Compile Include="Services\OrderProcessingService\VideoService.cs" />
+    <Compile Include="Services\OrderProcessingService\PhysicalProductOrBookService.cs" />
     <Compile Include="Services\OrderProcessingService\UpgradeMembershipService.cs" />
     <Compile Include="Services\OrderProcessingService\PhysicalProductService.cs" />
     <Compile Include="Services\OrderProcessingService\MembershipService.cs" />

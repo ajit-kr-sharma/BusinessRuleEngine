@@ -18,14 +18,14 @@ namespace BusinessRuleEngine.Services.OrderProcessingService
             if (model.Name != null)
             {
                 return new PaymentStatus { 
-                    isOrderProcessed = true, 
-                    message = "Packing slip created for physical product",
+                    IsOrderProcessed = true, 
+                    Message = "Packing slip created for physical product",
                 };
             }
 
             return new PaymentStatus { 
-                isOrderProcessed = false, 
-                message = ""
+                IsOrderProcessed = false, 
+                Message = ""
             }; ;
         }
     }

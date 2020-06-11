@@ -1,6 +1,5 @@
 ﻿using BusinessRuleEngine.Model;
 using BusinessRuleEngine.Services.OrderProcessing;
-using BusinessRuleEngine.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,26 +8,25 @@ using System.Threading.Tasks;
 
 namespace BusinessRuleEngine.Services.OrderProcessingService
 {
-    public class UpgradeMembershipService : OrderProcessing<UpgradeMembershipModel>
+    public class VideoService : OrderProcessing<VideoModel>
     {
-        protected override PaymentStatus ProcessOrder(UpgradeMembershipModel model)
+
+        protected override PaymentStatus ProcessOrder(VideoModel model)
         {
-            // Implement required logic here
-            if (model.MembershipName != null)
+            // logic to add First Aid video to the packing slip
+
+            if (model.Details != null)
             {
-                model.UpgradeStartDate = DateTime.Now;
-                model.UpgradeEndDate = DateTime.Now.AddYears(1);
                 return new PaymentStatus { 
                     IsOrderProcessed = true, 
-                    Message = "Membership upgraded" 
+                    Message = $"Added First Aid video to the packing slip."
                 };
             }
 
             return new PaymentStatus { 
                 IsOrderProcessed = false, 
-                Message = PaymentOrderType.UpgradeMemebership 
+                Message = string.Empty 
             }; ;
-
         }
     }
 }

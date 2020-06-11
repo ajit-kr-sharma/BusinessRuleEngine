@@ -18,13 +18,13 @@ namespace BusinessRuleEngine.Services.OrderProcessingService
             if (model.BookName != null)
             {
                 return new PaymentStatus { 
-                    isOrderProcessed = true, 
-                    message = "Royalty slip created With Amount" + model.RoyaltyAmount,
-                    isNotificationSent=true
+                    IsOrderProcessed = true, 
+                    Message = "Royalty slip created With Amount" + model.RoyaltyAmount,
+                    IsNotificationSent=true
                 };
             }
 
-            return new PaymentStatus { isOrderProcessed = false, message = "No Royalty" }; ;
+            return new PaymentStatus { IsOrderProcessed = false, Message = "No Royalty" }; ;
         }
     }
 }
