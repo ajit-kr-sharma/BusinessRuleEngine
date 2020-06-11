@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>27abda03-1aea-4c7d-a6a7-2e438349b9e7</ProjectGuid>
+    <ProjectGuid>{27ABDA03-1AEA-4C7D-A6A7-2E438349B9E7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BusinessRuleEngine</RootNamespace>
@@ -31,24 +31,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Interface\IOrderProcessing.cs" />
+    <Compile Include="Model\BookModel.cs" />
+    <Compile Include="Model\UpgradeMembershipModel.cs" />
+    <Compile Include="Model\PhysicalProductModel.cs" />
+    <Compile Include="Model\MembershipModel.cs" />
+    <Compile Include="Model\PaymentStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\OrderProcessingService\BookService.cs" />
+    <Compile Include="Services\OrderProcessingService\UpgradeMembershipService.cs" />
+    <Compile Include="Services\OrderProcessingService\PhysicalProductService.cs" />
+    <Compile Include="Services\OrderProcessingService\MembershipService.cs" />
+    <Compile Include="Services\OrderProcessing\OrderProcessing.cs" />
+    <Compile Include="Utilities\PaymentOrderType.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
