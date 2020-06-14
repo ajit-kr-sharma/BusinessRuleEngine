@@ -15,11 +15,11 @@ namespace BusinessRuleEngine.Services.OrderProcessingService
             // logic for Royalty calculation has to be done here
             model.RoyaltyAmount = model.Quantity * model.Price * model.Commission;
 
-            if (model.BookName != null)
+            if (!string.IsNullOrEmpty(model.BookName))
             {
                 return new PaymentStatus { 
                     IsOrderProcessed = true, 
-                    Message = "Royalty slip created With Amount" + model.RoyaltyAmount,
+                    Message = "Royalty slip created with Amount - " + model.RoyaltyAmount,
                     IsNotificationSent=true
                 };
             }

@@ -13,9 +13,9 @@ namespace BusinessRuleEngine.Services.OrderProcessingService
 
         protected override PaymentStatus ProcessOrder(PhysicalProductModel model)
         {
-            
+
             // Logic for packing slip
-            if (model.Name != null)
+            if (!string.IsNullOrEmpty(model.Name))
             {
                 return new PaymentStatus { 
                     IsOrderProcessed = true, 

@@ -14,12 +14,11 @@ namespace BusinessRuleEngine.Services.OrderProcessingService
         protected override PaymentStatus ProcessOrder(VideoModel model)
         {
             // logic to add First Aid video to the packing slip
-
-            if (model.Details != null)
+            if (!string.IsNullOrEmpty(model.Details))
             {
                 return new PaymentStatus { 
                     IsOrderProcessed = true, 
-                    Message = $"Added First Aid video to the packing slip."
+                    Message = "Added First Aid video to the packing slip."
                 };
             }
 

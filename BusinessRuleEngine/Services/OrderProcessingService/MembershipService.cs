@@ -16,8 +16,7 @@ namespace BusinessRuleEngine.Services.OrderProcessingService
 
             // logic implementation
             // If Payment is done then activate the membership and sent a mail to user.
-
-            if (model.MembershipName != null)
+            if (!string.IsNullOrEmpty(model.MembershipName))
             {
                 model.Status = true;
 

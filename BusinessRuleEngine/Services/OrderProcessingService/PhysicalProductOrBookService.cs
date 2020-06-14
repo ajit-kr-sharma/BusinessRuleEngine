@@ -13,8 +13,7 @@ namespace BusinessRuleEngine.Services.OrderProcessingService
         protected override PaymentStatus ProcessOrder(PhysicalProductOrBookModel model)
         {
             // Logic for Agent payment commission and update the model
-
-            if (model.AgentName != null)
+            if (!string.IsNullOrEmpty(model.AgentName))
             {
                 return new PaymentStatus {
                     IsOrderProcessed = true,

@@ -14,7 +14,7 @@ namespace BusinessRuleEngine.Services.OrderProcessingService
         protected override PaymentStatus ProcessOrder(UpgradeMembershipModel model)
         {
             // Implement required logic here
-            if (model.MembershipName != null)
+            if (!string.IsNullOrEmpty(model.MembershipName))
             {
                 model.UpgradeStartDate = DateTime.Now;
                 model.UpgradeEndDate = DateTime.Now.AddYears(1);

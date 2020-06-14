@@ -64,8 +64,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ServiceContainer.cs" />
-    <Compile Include="MembershipServiceTest.cs" />
+    <Compile Include="OrderProcessingService\BookServiceTest.cs" />
+    <Compile Include="OrderProcessingService\MembershipServiceTest.cs" />
+    <Compile Include="OrderProcessingService\PhysicalProductOrBookServiceTest.cs" />
+    <Compile Include="OrderProcessingService\PhysicalProductServiceTest.cs" />
+    <Compile Include="OrderProcessingService\UpgradeMembershipServiceTest.cs" />
+    <Compile Include="OrderProcessingService\VideoServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
